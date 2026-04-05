@@ -29,7 +29,5 @@ uploads/
 prisma/migrations/
 !prisma/schema.prisma
 !prisma/seed.ts
-src/
-tsconfig.json
 nodemon.json
 .vercelignore
