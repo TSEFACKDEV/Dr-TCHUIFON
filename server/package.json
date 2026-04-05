@@ -9,7 +9,7 @@
     "dev": "nodemon",
     "build": "prisma generate",
     "vercel-build": "npm run build:vercel",
-    "build:vercel": "node check-env.js && echo 'Building for Vercel...' && prisma generate && tsc -p tsconfig.json",
+    "build:vercel": "node check-env.js && echo 'Building for Vercel...' && npx prisma generate && npx tsc -p tsconfig.json",
     "build:clean": "rm -rf dist && tsc",
     "postinstall": "prisma generate",
     "type-check": "tsc --noEmit",
