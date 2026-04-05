@@ -1,0 +1,11 @@
+# Ignorer tous les fichiers uploadés
+*
+!.gitignore
+!.gitkeep
+!*/.gitkeep
+
+# Garder la structure des dossiers
+!profiles/
+!images/
+!pdfs/
+!documents/

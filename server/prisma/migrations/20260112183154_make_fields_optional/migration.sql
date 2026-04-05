@@ -1,0 +1,32 @@
+-- AlterTable
+ALTER TABLE "collaborators" ALTER COLUMN "name" DROP NOT NULL,
+ALTER COLUMN "institution" DROP NOT NULL;
+
+-- AlterTable
+ALTER TABLE "contact_messages" ALTER COLUMN "name" DROP NOT NULL,
+ALTER COLUMN "email" DROP NOT NULL,
+ALTER COLUMN "subject" DROP NOT NULL,
+ALTER COLUMN "message" DROP NOT NULL;
+
+-- AlterTable
+ALTER TABLE "courses" ALTER COLUMN "title" DROP NOT NULL,
+ALTER COLUMN "level" DROP NOT NULL,
+ALTER COLUMN "description" DROP NOT NULL;
+
+-- AlterTable
+ALTER TABLE "profiles" ALTER COLUMN "fullName" DROP NOT NULL,
+ALTER COLUMN "title" DROP NOT NULL,
+ALTER COLUMN "bio" DROP NOT NULL;
+
+-- AlterTable
+ALTER TABLE "publications" ALTER COLUMN "title" DROP NOT NULL,
+ALTER COLUMN "abstract" DROP NOT NULL,
+ALTER COLUMN "publicationDate" DROP NOT NULL,
+ALTER COLUMN "year" DROP NOT NULL,
+ALTER COLUMN "slug" DROP NOT NULL;
+
+-- AlterTable
+ALTER TABLE "supervisions" ALTER COLUMN "studentName" DROP NOT NULL,
+ALTER COLUMN "level" DROP NOT NULL,
+ALTER COLUMN "topic" DROP NOT NULL,
+ALTER COLUMN "startDate" DROP NOT NULL;
