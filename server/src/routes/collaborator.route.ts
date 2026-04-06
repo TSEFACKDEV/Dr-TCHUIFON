@@ -16,10 +16,10 @@ const router = Router();
 
 // Routes publiques
 router.get('/', getAllCollaborators);
+router.get('/user/me', authMiddleware, getMyCollaborators);
 router.get('/:id', getCollaboratorById);
 
 // Routes protégées
-router.get('/user/me', authMiddleware, getMyCollaborators);
 router.post('/', authMiddleware, isAdmin, uploadImage.single('photo'), createCollaborator);
 router.put('/:id', authMiddleware, isAdmin, uploadImage.single('photo'), updateCollaborator);
 router.delete('/:id', authMiddleware, isAdmin, deleteCollaborator);

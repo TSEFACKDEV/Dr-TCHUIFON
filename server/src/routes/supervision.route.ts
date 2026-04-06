@@ -13,10 +13,10 @@ const router = Router();
 
 // Routes publiques
 router.get('/', getAllSupervisions);
+router.get('/user/me', authMiddleware, getMySupervisions);
 router.get('/:id', getSupervisionById);
 
 // Routes protégées
-router.get('/user/me', authMiddleware, getMySupervisions);
 router.post('/', authMiddleware, isAdmin, createSupervision);
 router.put('/:id', authMiddleware, isAdmin, updateSupervision);
 router.delete('/:id', authMiddleware, isAdmin, deleteSupervision);

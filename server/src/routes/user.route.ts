@@ -15,10 +15,10 @@ const userRouter = Router();
 userRouter.get('/', getAllUsers);
 userRouter.get('/search', searchUsers);
 userRouter.get('/stats', getUsersStats);
+userRouter.get('/profile/me', authMiddleware, getUserProfile);
 userRouter.get('/:id', getUserById);
 
 // Protected routes - Authentication required
-userRouter.get('/profile/me', authMiddleware, getUserProfile);
 
 // Admin routes
 userRouter.delete('/:id', authMiddleware, deleteUser);

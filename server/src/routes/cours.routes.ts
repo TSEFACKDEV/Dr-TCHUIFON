@@ -18,10 +18,10 @@ const coursRouter = Router();
 coursRouter.get('/', getAllCourses);
 coursRouter.get('/search', searchCourses);
 coursRouter.get('/level/:level', getCoursesByLevel);
+coursRouter.get('/user/courses', authMiddleware, getCoursesByUser);
 coursRouter.get('/:id', getCourseById);
 
 // Protected routes - Authentication required
-coursRouter.get('/user/courses', authMiddleware, getCoursesByUser);
 
 // Create course with image upload
 coursRouter.post(

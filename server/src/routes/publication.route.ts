@@ -16,10 +16,10 @@ const router = Router();
 // Routes publiques
 router.get('/', getAllPublications);
 router.get('/slug/:slug', getPublicationBySlug);
+router.get('/user/me', authMiddleware, getMyPublications);
 router.get('/:id', getPublicationById);
 
 // Routes protégées
-router.get('/user/me', authMiddleware, getMyPublications);
 router.post('/', authMiddleware, isAdmin, uploadPdf.single('pdf'), createPublication);
 router.put('/:id', authMiddleware, isAdmin, uploadPdf.single('pdf'), updatePublication);
 router.delete('/:id', authMiddleware, isAdmin, deletePublication);
